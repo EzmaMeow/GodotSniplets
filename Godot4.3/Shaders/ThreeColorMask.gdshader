@@ -1,4 +1,9 @@
 shader_type canvas_item;
+
+//Note: I may make a new version of this. This version
+//colorize selection of the texture, but dose not handle
+//overlaping masks well.
+
 uniform vec4 color_r: source_color;
 uniform vec4 color_g: source_color;
 uniform vec4 color_b: source_color;
