@@ -1,1 +1,15 @@
-This will be a personal collection of code that could be used with godot.
+
+About
+======
+This will be a personal collection of code and assets that could be used with godot for deveoping games, apps, and programs.
+
+Assets
+======
+This will contain assets samples such as images and textures. 
+The GIMP workspace will contain xcf files for GIMP of work environment I use to create some of the assets.
+In short, subdirectories with the term 'workspace' will reprecent file for external programs for asset creation.
+
+Godot Directories
+======
+This is not a Godot project, but instead independent componets that could be used with Godot. 
+The Number after Godot (if any) represent the version of Godot it was made in.
