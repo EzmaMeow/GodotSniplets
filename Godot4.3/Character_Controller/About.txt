@@ -6,6 +6,12 @@ Also the node need to have a AnimatedSprite2D and asign it as the animation.
 
 Interaction need a RayCast2D node to be assign to it. 
 
+How to move: Wither by setting the direction or adding logic that set the direction. The direction is a normlize
+vector. For example using the vector from `Vector2(Input.get_axis("Left", "Right"),Input.get_axis("Forward", "Back"))` 
+in a _process to assign as the character direction will allow the character to move from input if Left, Right, Forward,
+and Back input keys are created. Also can use the vector from the direction_to() function as the direction if you want the
+character to move to a point 'position.direction_to(move_to_position)'.
+
 How Interaction works: Something need to call interact(). The logic is not inclued since
 it varies too much and I have a controller handler that handles listen to input.
 
