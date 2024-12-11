@@ -40,13 +40,19 @@ func on_direction_change(new_direction:Vector2):
 					animation.animation = &"default"
 			animation.speed_scale = new_direction.length()
 
-##Trigger the character interaction logic. Will return true if there was an interaction
-func interact() -> bool:
+##This will force the raycast to update as well as a check to see if
+##there an interaction
+func cast_for_interaction()->Interaction_Component_2D:
 	if interaction_raycast != null:
 		interaction_raycast.force_raycast_update()
-		var interaction_componet = interaction_raycast.get_collider() as Interaction_Component_2D
-		if interaction_componet != null:
-			return interaction_componet.interact(self)
+		return interaction_raycast.get_collider() as Interaction_Component_2D
+	return null
+
+##Trigger the character interaction logic. Will return true if there was an interaction
+func interact() -> bool:
+	var interaction_componet = cast_for_interaction()
+	if interaction_componet != null:
+		return interaction_componet.interact(self)
 	return false
 
 ##The movement logic
